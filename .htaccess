@@ -1,0 +1,5 @@
+Options +ExecCGI +MultiViews
+AddType text/plain .cgi
+AddHandler cgi-script .cgi
+AddType text/html .html
+AddLanguage ja .ja

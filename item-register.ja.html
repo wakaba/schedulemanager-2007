@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>予定の追加</title>
+<script type="text/javascript">
+  function $(id) { return document.getElementById (id) }
+  window.onload = function () {
+    var today = new Date ();
+    $('input-date').value = today.getFullYear () + '-'
+        + ('0' + (today.getMonth () + 1)).substr (-2) + '-'
+        + ('0' + (today.getDay () + 1)).substr (-2);
+  };
+</script>
+</head>
+<body>
+<h1>予定の追加</h1>
+
+<form action="item" method="post">
+
+<p><label>日付: <input type="date" name="date" id="input-date"></label> 
+    (<var lang="en">YYYY</var>-<var lang="en">MM</var>-<var lang="en">DD</var>)</p>
+<p><label>説明: <input type="text" name="title"></label></p>
+<p><label>備考: <br><textarea name="description"></textarea></label></p>
+
+<p><button type="submit">登録</button><input name="_charset_" type="hidden"></p>
+
+</form>
+
+</body>
+</html>
